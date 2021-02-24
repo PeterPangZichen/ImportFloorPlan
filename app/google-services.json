@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "693149975857",
+    "project_id": "floorplan-dc25f",
+    "storage_bucket": "floorplan-dc25f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693149975857:android:5dde3b1539b137abc09c10",
+        "android_client_info": {
+          "package_name": "com.example.importfloorplan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693149975857-ru7uhgin6t46crvqfgckar8ps6effchj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJwX8Y_BUk7yKRfdNvVWd2yvRsy5ndCeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "693149975857-ru7uhgin6t46crvqfgckar8ps6effchj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
