@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImportFloorPlan">
         <activity
-            android:name=".ChooseImageActivity"
+            android:name="com.example.importfloorplan.ChooseImageActivity"
             android:label="@string/title_activity_choose_image"
             android:theme="@style/Theme.ImportFloorPlan.NoActionBar"></activity>
         <activity android:name=".MainActivity">

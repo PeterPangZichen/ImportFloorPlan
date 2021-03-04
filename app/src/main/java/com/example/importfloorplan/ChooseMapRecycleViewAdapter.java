@@ -5,24 +5,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.MyHolder> {
+public class ChooseMapRecycleViewAdapter extends RecyclerView.Adapter<ChooseMapRecycleViewAdapter.MyHolder> {
 
     private List mList;//Data source
 
-    RecycleViewAdapter(List list) {
+    ChooseMapRecycleViewAdapter(List list) {
         mList = list;
     }
 
     //Create viewholder
     @Override
     public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.choose_map_recycler_view_item, parent, false);
         MyHolder holder = new MyHolder(view);
         return holder;
     }

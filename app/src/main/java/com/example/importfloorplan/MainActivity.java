@@ -1,11 +1,7 @@
 package com.example.importfloorplan;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,29 +10,17 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.Registry;
-import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.module.AppGlideModule;
-import com.firebase.ui.storage.images.FirebaseImageLoader;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+import com.github.chrisbanes.photoview.PhotoView;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView imageView;
+    PhotoView photoView;
     Button button;
 
     Bitmap bitmap;
@@ -46,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             if (msg.what == 0x1234) {
-                imageView.setImageBitmap(bitmap);
+                photoView.setImageBitmap(bitmap);
             }
         }
     };
@@ -56,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imageView = findViewById(R.id.test);
+        photoView = findViewById(R.id.map);
         button = findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
