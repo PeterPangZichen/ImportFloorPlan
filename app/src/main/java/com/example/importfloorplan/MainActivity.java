@@ -8,9 +8,12 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
+import com.github.chrisbanes.photoview.OnPhotoTapListener;
 import com.github.chrisbanes.photoview.PhotoView;
 
 import java.io.IOException;
@@ -49,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, ChooseImageActivity.class);
                 MainActivity.this.startActivity(intent);
+            }
+        });
+
+        photoView.setOnPhotoTapListener(new OnPhotoTapListener() {
+            @Override
+            public void onPhotoTap(ImageView view, float x, float y) {
+                System.out.println("x:"+x+" y:"+y);
             }
         });
 
